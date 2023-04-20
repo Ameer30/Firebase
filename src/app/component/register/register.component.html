@@ -1,0 +1,59 @@
+<div class="back" style="background-image: url('https://img.freepik.com/premium-vector/circuit-board-technology-background-with-hi-tech-digital-data-connection-system-computer-electronic_29971-475.jpg?w=740'); height: 36em;;">
+<div class="container">
+    <div class="row mt-5">
+        <div class="col">
+        </div>
+        <div class="col-4">
+            <div class="card shadow">
+                <div class="card-body" >
+                    <form (submit)="onSubmit()" [formGroup]="registerForm">
+                        <div class="mb-3">
+                            <h4 class="text-dark text-muted">Register</h4>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input [ngClass]="{'is-invalid':submitted && registerForm.controls.email.errors}" formControlName="email" type="email" class="form-control" [(ngModel)]="email1">
+                                <div *ngIf="submitted && registerForm.controls.email.errors" class="text-danger">
+                                  <div *ngIf="submitted && registerForm.controls.email.errors.required">
+                                    Email Address is required
+                                  </div>
+                                  <div *ngIf="submitted && registerForm.controls.email.errors.email">
+                                    Email Address is not Valid
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input [ngClass]="{'is-invalid':submitted && registerForm.controls.password.errors}" formControlName="password" type="password" class="form-control" [(ngModel)]="password1">
+                                <div *ngIf="submitted && registerForm.controls.password.errors" class="text-danger">
+                                  <div *ngIf="submitted && registerForm.controls.password.errors.required">
+                                    Password is required
+                                  </div>
+                                  <div *ngIf="submitted && registerForm.controls.password.errors.minlength">
+                                    Password should be atleast 6 characters
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                             <button class="btn btn-warning btn-block">Register</button>
+                        </div>
+                        <!-- <button type="button" class="btn btn-info" (click)="register()">Register</button> -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="/login" style="text-decoration: none;">Have an account ? <span class="text-danger">Login</span></a>
+                            </div>
+                        </div>
+                        <div class="bg-image" style="background-image: url('https://img.freepik.com/premium-vector/circuit-board-technology-background-with-hi-tech-digital-data-connection-system-computer-electronic_29971-475.jpg?w=740');"></div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+</div>

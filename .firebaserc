@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "login-4b0ed": {
+      "hosting": {
+        "firebase": [
+          "login-4b0ed"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "login-4b0ed"
+  }
+}

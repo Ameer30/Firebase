@@ -1,0 +1,14 @@
+i{
+    position: absolute;
+    padding-top: 10px;
+    margin-left: 50%;
+}
+/* .me-2 {
+    margin-right: -6.9rem!important;
+    margin-left: 90%;
+} */
+.ngx-pagination {
+    margin-left: 100px;
+    margin-bottom: 1rem;
+    padding-left: 200px;
+}
